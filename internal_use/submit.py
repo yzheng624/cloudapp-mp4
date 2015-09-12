@@ -19,9 +19,14 @@ class MP4(CourseraSubmission):
 
         self.course_id = 'cloudapplications-001'
         self.part_names = ["Create and Populate an HBase Table"]
-        self.files_results = ["output-part-a.txt"]
+        PREFIX = os.environ["PREFIX"]
+
+        self.files_results = ["SuperTable.output"]
         self.files_codes = [
-            ["src/SuperTable.java"],
+            [os.path.join(PREFIX, "SuperTable.java"),
+             os.path.join(PREFIX, "SuperTable.log"),
+             os.path.join(PREFIX, "SuperTable.hbase"),
+             ]
         ]
 
     @staticmethod
