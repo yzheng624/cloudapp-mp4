@@ -21,7 +21,7 @@ class MP4(CourseraSubmission):
         self.part_names = ["Create and Populate an HBase Table"]
         PREFIX = os.environ["PREFIX"]
 
-        self.files_results = ["SuperTable.output"]
+        self.files_results = [os.path.join(PREFIX, "SuperTable.output")]
         self.files_codes = [
             [os.path.join(PREFIX, "SuperTable.java"),
              os.path.join(PREFIX, "SuperTable.log"),
