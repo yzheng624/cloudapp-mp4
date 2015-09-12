@@ -44,11 +44,7 @@ class MP4(CourseraSubmission):
         return self.get_file_content(self.files_results[part_index])
 
     def is_enabled(self, part_index):
-        ret = True
-        ret = ret and os.path.exists(self.files_results[part_index])
-        for filename in self.files_codes[part_index]:
-            ret = ret and os.path.exists(filename)
-        return ret
+        return True
 
 if __name__ == "__main__":
     mp1 = MP4()

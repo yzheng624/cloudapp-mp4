@@ -2,12 +2,9 @@
 
 echo "${green}Reset the Environment${reset}"
 echo 'disable powers;drop powers' | hbase shell
+rm -rf $PREFIX
 
 run_assignment() {
-	echo "${green}Cleaning UP${reset}"
-	echo "disable 'powers';drop 'powers'" | hbase shell
-	rm -rf $PREFIX
-
 	echo "${yellow}	Compile the Code${reset}"
 	mkdir $PREFIX
 	cp $1.java $PREFIX/
