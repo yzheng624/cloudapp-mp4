@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "${green}Reset the Environment${reset}"
-echo 'disable powers;drop powers' | hbase shell
+echo "disable 'powers';drop 'powers'" | hbase shell
 rm -rf $PREFIX
 
 run_assignment() {
