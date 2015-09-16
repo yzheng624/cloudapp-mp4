@@ -11,7 +11,9 @@ run_assignment() {
 	javac $PREFIX/$1.java -d $PREFIX
 
 	echo "${yellow}	Run${reset}"
-	java $1 > $PREFIX/$1.output 2> $PREFIX/$1.log
+	cd $PREFIX
+	java $1 > $1.output 2> $1.log
+	cd -
 
 	echo "${yellow}	Collect the Output${reset}"
 	echo "scan 'powers'" | hbase shell > $PREFIX/$1.hbase
